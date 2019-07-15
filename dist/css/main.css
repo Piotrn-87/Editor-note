@@ -338,6 +338,16 @@ body {
   font-size: 44px;
   line-height: 64px;
   margin-bottom: 2rem; }
+  @supports (-webkit-background-clip: text) {
+    .header {
+      background: -webkit-gradient(linear, left top, right top, from(#121232), to(limegreen));
+      background: -webkit-linear-gradient(left, #121232, limegreen);
+      background: -o-linear-gradient(left, #121232, limegreen);
+      background: linear-gradient(to right, #121232, limegreen);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone; } }
 
 .main {
   max-width: 640px;

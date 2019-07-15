@@ -28,6 +28,14 @@ body {
   font-size: 44px;
   line-height: 64px;
   margin-bottom: 2rem;
+
+  @supports (-webkit-background-clip: text) {
+    background: linear-gradient(to right, #121232, limegreen);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
 }
 
 .main {
@@ -46,6 +54,7 @@ body {
     display: block;
     font-size: 1rem;
     margin-bottom: 1rem;
+
   }
 
   &__message {
