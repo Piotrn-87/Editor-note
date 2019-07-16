@@ -5,7 +5,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap&subset=latin-ext");
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700&display=swap&subset=latin-ext");
 html {
   line-height: 1.15;
   /* 1 */
@@ -345,7 +345,7 @@ template {
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: "Open Sans";
+  font-family: "Lato";
 }
 
 *,
@@ -356,7 +356,7 @@ html {
 }
 
 body {
-  color: black;
+  color: #ccc;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -367,6 +367,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background: radial-gradient(#246, #002);
 }
 
 .header {
@@ -379,8 +380,8 @@ body {
 
 @supports (-webkit-background-clip: text) {
   .header {
-    background: -webkit-gradient(linear, left top, right top, from(#121232), to(limegreen));
-    background: linear-gradient(to right, #121232, limegreen);
+    background: -webkit-gradient(linear, left top, right top, from(#aaa), to(#fff));
+    background: linear-gradient(to right, #aaa, #fff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-box-decoration-break: clone;
@@ -391,6 +392,34 @@ body {
 .main {
   max-width: 640px;
   width: 100%;
+  height: 80vh;
+  padding: 1rem;
+  position: relative;
+}
+
+.form__wrapper:before {
+  background: rgba(0, 0, 0, 0.5);
+  color: coral;
+  content: "Write your worries below and take control of your life!!";
+  font-size: 1rem;
+  left: 60%;
+  opacity: 0;
+  top: 40%;
+  position: absolute;
+  white-space: wrap;
+}
+
+.form__wrapper:hover:before {
+  top: 20%;
+  left: 50%;
+  opacity: 1;
+  max-height: 5rem;
+  max-width: 18rem;
+  border-radius: 7px;
+  -webkit-transition: .5s linear;
+  transition: .5s linear;
+  padding: 10px;
+  text-align: justify;
 }
 
 .form__action {
@@ -398,23 +427,27 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .form__label {
   display: block;
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin-bottom: 1rem;
 }
 
 .form__message {
-  width: 100%;
-  min-height: 10rem;
-  border: 1px solid #121232;
+  background: #ccc;
+  border: 2px solid #121232;
   border-radius: 4px;
+  max-width: 38rem;
+  min-width: 38rem;
+  max-height: 18rem;
+  min-height: 15rem;
   padding: 8px;
+  width: 100%;
 }
 
 .form__button {
@@ -425,18 +458,34 @@ body {
   font-size: 1rem;
   line-height: 16px;
   letter-spacing: 1px;
+  margin-left: 1rem;
 }
 
 .form__button--save {
   background: #121232;
   border-radius: 4px;
   border: 1px solid #121232;
-  color: #fff;
+  color: #ccc;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.form__button--save:hover {
+  background: #ccc;
+  color: #121232;
 }
 
 .form__button--load {
-  background: #FFFFFF;
+  background: #121232;
   border: 1px solid #121232;
   border-radius: 4px;
+  color: #ccc;
+  -webkit-transition: .3s linear;
+  transition: .3s linear;
+}
+
+.form__button--load:hover {
+  background: #ccc;
+  color: #121232;
 }
 /*# sourceMappingURL=main.css.map */

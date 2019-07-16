@@ -1,11 +1,12 @@
 @import "_normalize";
 @import "_variables";
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap&subset=latin-ext');
+
 
 html {
   box-sizing: border-box;
-  font-family: "Open Sans";
+  font-family: "Lato";
 }
 
 *,
@@ -15,11 +16,12 @@ html {
 }
 
 body {
-  color: black;
+  color: #ccc;
   display: flex;
   height: 100vh;
   justify-content: center;
   align-items: center;
+  background: radial-gradient(#246, #002);
 }
 
 .header {
@@ -30,7 +32,7 @@ body {
   margin-bottom: 2rem;
 
   @supports (-webkit-background-clip: text) {
-    background: linear-gradient(to right, #121232, limegreen);
+    background: linear-gradient(to right, #aaa, #fff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-box-decoration-break: clone;
@@ -41,28 +43,58 @@ body {
 .main {
   max-width: 640px;
   width: 100%;
+  height: 80vh;
+  padding: 1rem;
+  position: relative;
 }
 
 .form {
+  &__wrapper:before {
+    background: rgba(0, 0, 0, 0.5);
+    color: coral;
+    content: "Write your worries below and take control of your life!!";
+    font-size: 1rem;
+    left: 60%;
+    opacity: 0;
+    top: 40%;
+    position: absolute;
+    white-space: wrap;
+  }
+
+  &__wrapper:hover:before {
+    top: 20%;
+    left: 50%;
+    opacity: 1;
+    max-height: 5rem;
+    max-width: 18rem;
+    border-radius: 7px;
+    transition: .5s linear;
+    padding: 10px;
+    text-align: justify;
+  }
+
   &__action {
     margin-top: 2rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
   }
 
   &__label {
     display: block;
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin-bottom: 1rem;
-
   }
 
   &__message {
-    width: 100%;
-    min-height: 10rem;
-    border: 1px solid #121232;
+    background: #ccc;
+    border: 2px solid #121232;
     border-radius: 4px;
+    max-width: 38rem;
+    min-width: 38rem;
+    max-height: 18rem;
+    min-height: 15rem;
     padding: 8px;
+    width: 100%;
   }
 
   &__button {
@@ -73,18 +105,32 @@ body {
     font-size: 1rem;
     line-height: 16px;
     letter-spacing: 1px;
+    margin-left: 1rem;
 
     &--save {
       background: #121232;
       border-radius: 4px;
       border: 1px solid #121232;
-      color: #fff;
+      color: #ccc;
+      transition: .3s;
+
+      &:hover {
+        background: #ccc;
+        color: #121232;
+      }
     }
 
     &--load {
-      background: #FFFFFF;
+      background: #121232;
       border: 1px solid #121232;
       border-radius: 4px;
+      color: #ccc;
+      transition: .3s linear;
+
+      &:hover {
+        background: #ccc;
+        color: #121232;
+      }
     }
   }
 }
