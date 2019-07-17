@@ -16,6 +16,7 @@ to run locally ->
 * HTML 5
 * CSS 3 SCSS -> BEM
 * npm
+* GIT
 
 # Contact
  feel free to contact me!
