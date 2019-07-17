@@ -3,7 +3,6 @@
 
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap&subset=latin-ext');
 
-
 html {
   box-sizing: border-box;
   font-family: "Lato";
@@ -27,8 +26,8 @@ body {
 .header {
   font-style: normal;
   font-weight: 600;
-  font-size: 44px;
-  line-height: 64px;
+  font-size: 2.7rem;
+  line-height: 4rem;
   margin-bottom: 2rem;
 
   @supports (-webkit-background-clip: text) {
@@ -69,7 +68,7 @@ body {
     max-width: 18rem;
     border-radius: 7px;
     transition: .5s linear;
-    padding: 10px;
+    padding: 0.5rem;
     text-align: justify;
   }
 
@@ -87,7 +86,6 @@ body {
 
   &__message {
     background: #ccc;
-    border: 2px solid #121232;
     border-radius: 4px;
     max-width: 38rem;
     min-width: 38rem;
@@ -103,33 +101,33 @@ body {
     padding: 1rem;
     font-weight: 600;
     font-size: 1rem;
-    line-height: 16px;
+    line-height: 1rem;
     letter-spacing: 1px;
     margin-left: 1rem;
 
     &--save {
-      background: #121232;
+      background: $dark;
       border-radius: 4px;
-      border: 1px solid #121232;
+      border: 1px solid $dark;
       color: #ccc;
       transition: .3s;
 
       &:hover {
         background: #ccc;
-        color: #121232;
+        color: $dark;
       }
     }
 
     &--load {
-      background: #121232;
-      border: 1px solid #121232;
+      background: $dark;
+      border: 1px solid $dark;
       border-radius: 4px;
       color: #ccc;
       transition: .3s linear;
 
       &:hover {
         background: #ccc;
-        color: #121232;
+        color: $dark;
       }
     }
   }
