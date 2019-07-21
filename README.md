@@ -1,4 +1,4 @@
-![Homepage screenshot](img/editor.png)
+![Homepage screenshot](dist/assets/img/editor.png)
 # Simple Editor's Note supported with local storage
 
 live: https://piotrn-87.github.io/Editor-note/
